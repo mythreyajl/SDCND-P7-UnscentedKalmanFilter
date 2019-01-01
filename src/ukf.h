@@ -95,6 +95,25 @@ class UKF {
 
   // Sigma point spreading parameter
   double lambda_;
+    
+  // Previous timestamp
+  long long previous_timestamp_;
+    
+  // Radar measurement dimensions
+  int n_radar_;
+    
+  // Radar measurement dimensions
+  int n_lidar_;
+    
+  // NIS measurements - lidar
+  double NIS_lidar_;
+  int NIS_lidar_exceed_count = 0;
+  int lidar_count = 0;
+  
+  // NIS measurements - lidar
+  double NIS_radar_;
+  int NIS_radar_exceed_count = 0;
+  int radar_count = 0;
 };
 
 #endif  // UKF_H
